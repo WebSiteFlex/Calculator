@@ -1,30 +1,40 @@
-*{
-    box-sizing: border-box;
-}
 body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-   background-color: #333;
+    height: 100vh;
+    background-image: url("/Assets/background.png");
+    background-position: center center;
     margin: 0;
 }
 
 .calculator {
     width: 400px;
-    height: 500px;
+    height: 530px;
+    background-image: linear-gradient(to top right,#FF4231,#FF7570,#FF7D42,#FF9D53);
     border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.473);
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.342);
+    .imgIcon{
+        width: 100%;
+        height: 20px;
+        img{
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-left: 10px;
+            opacity: 40%;
+        }
+    }
 
     .screen {
-        background-color: #fff;
-        border: 1px solid #ccc;
         border-radius: 5px;
-        padding: 10px;
+        padding: 13px;
         margin-bottom: 10px;
         font-size: 24px;
         text-align: right;
+        color: white;
+        font-size: 40px;
     }
     .row1{
         grid-area: row1;
@@ -52,31 +62,41 @@ body {
         "row3 row3 row3 row3"
         "row4 row4 row4 row4"
         "row5 row5 row5 row5";
+        gap: 2px;
        
         .button {
             width: 24%;
             padding: 25px;
-            background-color: #f0f0f0;
-            border: none;
+            background-color: #e4e4e47c;
             border-radius: 5px;
+            border: none;
             font-size: 20px;
             cursor: pointer;
+            transition: all 0.2s ease-in-out;
 
             &.number {
-                color: #333;
+                color: white;
+                font-size: 20px;
+                font-weight: 600;
             }
 
             &.operator {
-                color: #ff8c00;
+                color: white;
+                font-size: 20px;
+                font-weight: 600;
             }
 
             &.equal {
                 background-color: #ff8c00;
                 color: white;
+                font-size: 20px;
+                font-weight: 600;
             }
 
             &:hover {
                 background-color: #d0d0d0;
+                box-shadow: inset 0 0 5px black;
+                padding: 24px;
             }
         }
 
