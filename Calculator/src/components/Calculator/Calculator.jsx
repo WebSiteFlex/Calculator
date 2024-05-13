@@ -1,17 +1,17 @@
-import classCalculator from "/Calculator.module.css"
-import Img from "/assets/threePoints"
+import classCalculator from "./Calculator.module.css"
+import img from "./assets/points.png"
 const Calculator = () => {
     return (
 
         <>
             <div className={classCalculator.calculator}>
-                <div className="imgIcon">
-                    <img src={Img} alt="imgIcon" />
+                <div className={classCalculator.imgIcon}>
+                    <img src={img} alt="imgIcon" />
                 </div>
                 <div class={classCalculator.screen}id="state">0</div>
                 <div className={classCalculator.keys}>
                     <div className={classCalculator.row1}>
-                        <button class={`${classCalculator.button}${classCalculator.operator} ${classCalculator.ac}`} id="AC">AC</button>
+                        <button class={`${classCalculator.button} ${classCalculator.operator} ${classCalculator.ac}`} id="AC">AC</button>
                         <button class={`${classCalculator.button} ${classCalculator.operator}`} >%</button>
                         <button class={`${classCalculator.button} ${classCalculator.operator}`}>±</button>
                         <button class={`${classCalculator.button} ${classCalculator.operator}`} >/</button>
